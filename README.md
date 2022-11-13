@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/single-price-grid-component-using-css-grid-nHwUWc8SPB](https://www.frontendmentor.io/solutions/single-price-grid-component-using-css-grid-nHwUWc8SPB)
-- Live Site URL: [https://nt-squared.github.io/single-price-grid-component/](https://nt-squared.github.io/single-price-grid-component/)
+- Solution URL: [https://www.frontendmentor.io/solutions/huddle-landing-page-with-single-introductory-section-using-css-grid-mjpAPabtfJ](https://www.frontendmentor.io/solutions/huddle-landing-page-with-single-introductory-section-using-css-grid-mjpAPabtfJ)
+- Live Site URL: [https://nt-squared.github.io/huddle-landing-page-with-single-introductory-section/](https://nt-squared.github.io/huddle-landing-page-with-single-introductory-section/)
 
 ## My process
 

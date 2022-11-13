@@ -1,0 +1,197 @@
+:root {
+    /* color primany */
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+    /* font */
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+    --fw-400: 400;
+    --fw-600: 600;
+
+    --transition: 500ms ease;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    background-color: var(--Violet);
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    width: 50ch;
+    height: 100%;
+    text-align: center;
+    margin-inline: 3rem;
+    padding-block: 3rem;
+    transform: var(--transition);
+}
+
+main .logo {
+    width: 40%;
+    float: left;
+}
+
+main h1 {
+    font-size: clamp(1.875rem, calc(1.625rem + 0.77vw), 2.25rem);
+    line-height: 1.4;
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-600);
+    transition: var(--transition);
+}
+
+main p {
+    font-size: clamp(1.125rem, calc(1.33rem + -0.26vw), 1.25rem);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    margin-top: 1.2rem;
+    transition: var(--transition);
+}
+
+main button {
+    background-color: white;
+    color: var(--Violet);
+    font-family: var(--ff-heading);
+    font-size: clamp(1.00rem, calc(0.92rem + 0.26vw), 1.125rem);;
+    text-align: center;
+    width: 62.5%;
+    margin-top: 2rem;
+    margin-inline: auto;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0 0 0 / 0.2);
+    transition: var(--transition);
+}
+
+main .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: var(--transition);
+}
+
+main .social a {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255 255 255 / 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+main :is(.logo, .image-header, button) {
+    margin-bottom: 4rem;
+}
+
+/* Adding effect */
+@media (hover: hover) and (pointer: fine) {
+    main button:hover {
+        color: white;
+        background-image: linear-gradient(135deg, var(--Violet), var(--Soft-Magenta)) ;
+        box-shadow: 0 0 15px rgba(0 0 0 / 0.5);
+        cursor: pointer;
+    }
+    
+    main .social a:hover {
+        fill: white;
+        transform: scale(1.2) translateY(-5px);
+    }
+    
+    main .social a.facebook:hover {
+        background: linear-gradient(45deg, #3b5998, #0078d7);
+        box-shadow: 0 4px 30px rgba(43 98 169 / 0.5);
+    }
+    
+    main .social a.twitter:hover {
+        background: linear-gradient(45deg, #1da1f2, #0e71c8);
+        box-shadow: 0 4px 30px rgba(19 127 212 / 0.7);
+    }
+    
+    main .social a.instagram:hover {
+        background: linear-gradient(45deg, #405de6, #5851db,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d);
+        box-shadow: 0 4px 30px rgba(120 64  190 / 0.6);
+    }
+
+    main :is(button, .social a):active {
+        transform: scale(0.95) translateY(0);
+    }
+}
+
+/* Desktop view */
+@media screen and (min-width: 601px) {
+    body {
+        background-image: url('../images/bg-desktop.svg');
+        background-size: auto;
+        background-position: 40% 40%;
+    }
+
+    main {
+        width: min(100%, 1280px);
+        height: auto;
+        text-align: left;
+        display: grid;
+        grid-gap: 0.25rem;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "logo logo . . ."
+            "img-header img-header img-header content content"
+            "img-header img-header img-header content content"
+            "img-header img-header img-header . social";
+    }
+
+    main .logo {
+        grid-area: logo;
+    }
+    main .image-header {
+        grid-area: img-header;
+    }
+
+    main .content {
+        grid-area: content;
+    }
+
+    main h1 {
+        margin-top: 2.5rem;
+    }
+
+    main button {
+        width: 40%;
+        padding-block: 1rem;
+    }
+    main .social {
+        grid-area: social;
+        place-self: end end;
+        /* align-self: end;
+        justify-self: end; */
+    }
+}
+
+
+
+
+
+
+
+
